@@ -14,6 +14,9 @@ function memeReducer(state = initialState, action: Action): Props[] {
 
   switch (type) {
     case RECEIVE_MEME:
+      const randomNumber = Math.floor(Math.random() * 15)
+      const singleImage = payload.image[randomNumber]
+        state = {payload.topText, payload.bottomText, singleImage}
       return [...state]
     default:
       return state
