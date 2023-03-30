@@ -1,7 +1,7 @@
 import { Action, RECEIVE_MEME } from '../actions/meme'
-import { memeData } from '../../common/interfaces'
+// import { Meme } from '../../common/interfaces'
 
-const initialState = [{ imageArr: ['./random'] }]
+const initialState = [{ id: '', image: './random' }]
 
 function memeReducer(state = initialState, action: Action) {
   const { type, payload } = action
