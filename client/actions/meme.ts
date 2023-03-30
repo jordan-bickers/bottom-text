@@ -1,6 +1,6 @@
 import type { ThunkAction } from '../store'
 // import { Meme } from '../../models/meme'
-import { fetchMemeApi } from '../apis/meme'
+import { fetchAllMemes } from '../apis/apiClient'
 
 export const REQUEST_MEME = 'REQUEST_MEME'
 export const RECEIVE_MEME = 'RECEIVE_MEME'
@@ -8,10 +8,7 @@ export const SHOW_ERROR = 'SHOW_ERROR'
 
 export type Action =
   | { type: typeof REQUEST_MEME; payload: null }
-  | {
-      type: typeof RECEIVE_MEME
-      payload: { topText: string; bottomText: string; image: string[] }
-    }
+  | { type: typeof RECEIVE_MEME; payload: string[] }
   | { type: typeof SHOW_ERROR; payload: string }
 
 export function requestMeme(): Action {
@@ -21,14 +18,10 @@ export function requestMeme(): Action {
   }
 }
 
-export function receiveMeme(
-  top: string,
-  bot: string,
-  imgArr: string[]
-): Action {
+export function receiveMeme(imageArr: string[]): Action {
   return {
     type: RECEIVE_MEME,
-    payload: { topText: top, bottomText: bot, image: imgArr },
+    payload: imageArr,
   }
 }
 
@@ -39,14 +32,14 @@ export function showError(errorMessage: string): Action {
   }
 }
 
-export function fetchMeme(bot: string, top: string): ThunkAction {
+export function fetchMeme(): ThunkAction {
   return (dispatch) => {
     dispatch(requestMeme())
-    return fetchMemeApi()
-      .then((memeArr: string[]) => {
-        dispatch(receiveMeme(top, bot, memeArr))
+    return fetchAllMemes()
+      .then((imageArr: string[]) => {
+        dispatch(receiveMeme(imageArr))
       })
-      .catch((err) => {
+      .catch((err: Error) => {
         dispatch(showError(err.message))
       })
   }
