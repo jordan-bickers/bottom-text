@@ -1,10 +1,16 @@
 import { useState, FormEvent, ChangeEvent } from 'react'
+import { receiveForm } from '../actions/meme'
+import { useAppDispatch } from '../hooks/redux'
 
 export default function MemeForm() {
   const [formData, setFormData] = useState({ toptext: '', bottomtext: '' })
+  const dispatch = useAppDispatch()
 
   const submitHandler = (e: FormEvent) => {
     e.preventDefault()
+    console.log(formData)
+
+    dispatch(receiveForm(formData.bottomtext, formData.toptext))
     // api call here
   }
 
@@ -23,6 +29,7 @@ export default function MemeForm() {
         name="bottomtext"
         onChange={changeHandler}
       />
+      <button onClick={submitHandler}>subbie</button>
     </form>
   )
 }
