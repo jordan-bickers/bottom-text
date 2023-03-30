@@ -5,6 +5,7 @@ export default function MemeForm() {
 
   const submitHandler = (e: FormEvent) => {
     e.preventDefault()
+    // api call here
   }
 
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
