@@ -3,6 +3,8 @@ import MemeForm from './MemeForm'
 function App() {
   return (
     <>
+      <h1 className="text-3xl font-bold underline">Tailwind testing!</h1>
+      <button className=""></button>
       <MemeForm />
     </>
   )
