@@ -1,5 +1,5 @@
 import MemeForm from './MemeForm'
-import '../../server/public/styles.css'
+import '../../server/public/main.css'
 import Meme from './Meme'
 // import { useEffect, useState, FormEvent, ChangeEvent } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
