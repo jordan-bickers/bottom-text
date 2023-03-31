@@ -1,5 +1,6 @@
 import MemeForm from './MemeForm'
 import '../../server/public/styles.css'
+import Meme from './Meme'
 
 function App() {
   return (
