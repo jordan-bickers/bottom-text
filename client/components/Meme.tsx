@@ -22,11 +22,17 @@ export default function Meme() {
 
   return (
     <>
-      <div>
+      <div className="divvy">
         <h2>Here is your meme!</h2>
-        <p className="topText">{top}</p>
-        <img src={memeImage} alt="" />
-        <p className="bottomText">{bot}</p>
+        <div className="top-div">
+          <p className="topText">{top}</p>
+        </div>
+        <div className="meme-div">
+          <img className="memeImg" src={memeImage} alt="" />
+        </div>
+        <div className="bottom-div">
+          <p className="bottomText">{bot}</p>
+        </div>
         <Link to="/">
           <button className="homeButton">Home</button>
         </Link>
