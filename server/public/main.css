@@ -1,0 +1,45 @@
+.memeImg {
+  width: 600px;
+  height: 600px;
+  position: relative;
+ 
+ }
+ 
+ .divvy {
+   position: absolute;
+ }
+ 
+ .top-div {
+   position: relative;
+     top: 75px;
+     width: 600px;
+     text-align: center;
+     z-index: 1;
+ }
+ 
+ .bottom-div {
+   position: relative;
+     width: 600px;
+     bottom: 80px;
+     text-align: center;
+     z-index: 1;
+ }
+ 
+ /* .topText, .bottomText {
+ font-family: Impact;
+ font-size: 4.5em;
+ text-transform: uppercase;
+ color: rgb(255, 255, 255);
+ letter-spacing: 1px;
+ text-shadow: 2px, 2px, 0 #000,
+  -2px, -2px, 0 #000,
+  2px, -2px, 0 #000,
+  -2px, 2px, 0 #000,
+  0px, 2px, 0 #000,
+  2px, 0px, 0 #000,
+  0px, -2px, 0 #000,
+ 
+  -2px, 0px, 0 #000,
+  2px, 2px, 5px #000,
+ 
+ } */
