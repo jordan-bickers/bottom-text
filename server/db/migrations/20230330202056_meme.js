@@ -5,7 +5,7 @@
 exports.up = function (knex) {
   return knex.schema.createTable('memes', (table) => {
     table.increments('id').primary()
-    table.blob('image')
+    table.string('image')
   })
 }
 
