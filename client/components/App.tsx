@@ -1,4 +1,5 @@
 import MemeForm from './MemeForm'
+import '../../server/public/styles.css'
 
 function App() {
   return (

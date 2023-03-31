@@ -17,13 +17,8 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(sa|sc|c)ss$/,
-        use: [
-          // {
-          //   loader: MiniCssExtractPlugin.loader,
-          // },
-          // 'css-loader',
-        ],
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
     ],
   },

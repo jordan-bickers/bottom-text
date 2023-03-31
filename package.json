@@ -92,7 +92,9 @@
     "express": "^4.17.2",
     "knex": "^2.3.0",
     "pg": "^8.8.0",
+    "postcss-loader": "^7.1.0",
     "sqlite3": "^5.1.2",
+    "style-loader": "^3.3.2",
     "superagent": "7.1.1",
     "ts-node": "^10.9.1"
   },
