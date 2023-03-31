@@ -7,7 +7,7 @@ import { Link, Route, Routes } from 'react-router-dom'
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline title">Tailwind testing!</h1>
+      <h1 className="text-3xl font-bold underline title">BOTTOM TEXT</h1>
       <Routes>
         <Route path="/" element={<MemeForm />} />
         <Route path="/meme" element={<Meme />} />
