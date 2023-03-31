@@ -1,17 +1,19 @@
 import { useEffect, useState, FormEvent, ChangeEvent } from 'react'
+import { Link, Route, Routes } from 'react-router-dom'
 import { receiveForm } from '../actions/meme'
 import { useAppDispatch, useAppSelector } from '../hooks/redux'
 import { fetchMeme } from '../actions/meme'
+import Meme from './Meme'
 
 export default function MemeForm() {
   const [formData, setFormData] = useState({ toptext: '', bottomtext: '' })
   const dispatch = useAppDispatch()
 
   const submitHandler = (e: FormEvent) => {
-    e.preventDefault()
+    // e.preventDefault()
 
     dispatch(receiveForm(formData.bottomtext, formData.toptext))
-    // api call here
+    // api call hererea
   }
 
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -40,7 +42,9 @@ export default function MemeForm() {
           name="bottomtext"
           onChange={changeHandler}
         />
-        <button onClick={submitHandler}>subbie</button>
+        <Link to="/meme">
+          <button onClick={submitHandler}>subbie</button>
+        </Link>
       </form>
     </>
   )
