@@ -101,3 +101,50 @@ Our first job is getting something showing on the front end from our database. H
 
 ---
 [Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=my-fullstack-collection-scss)
+
+
+.memeImg {
+ width: 600px;
+ height: 600px;
+ position: relative;
+
+}
+
+.divvy {
+  position: absolute;
+}
+
+.top-div {
+  position: relative;
+    top: 75px;
+    width: 600px;
+    text-align: center;
+    z-index: 1;
+}
+
+.bottom-div {
+  position: relative;
+    width: 600px;
+    bottom: 80px;
+    text-align: center;
+    z-index: 1;
+}
+
+.topText, .bottomText {
+font-family: Impact;
+font-size: 4.5em;
+text-transform: uppercase;
+color: rgb(255, 255, 255);
+letter-spacing: 1px;
+text-shadow: 2px, 2px, 0 #000,
+ -2px, -2px, 0 #000,
+ 2px, -2px, 0 #000,
+ -2px, 2px, 0 #000,
+ 0px, 2px, 0 #000,
+ 2px, 0px, 0 #000,
+ 0px, -2px, 0 #000,
+
+ -2px, 0px, 0 #000,
+ 2px, 2px, 5px #000,
+
+}
