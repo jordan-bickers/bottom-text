@@ -103,6 +103,35 @@ Our first job is getting something showing on the front end from our database. H
 [Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=my-fullstack-collection-scss)
 
 
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 20px;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* .topText {
+  color: aliceblue;
+  font-size: 70px;
+  margin: 0px;
+  font-family: impact;
+  font-weight: 900;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.bottomText{
+  color: aliceblue;
+  font-size: 70px;
+  margin: 0px;
+  font-family: impact;
+  font-weight: 900;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+} */
+
 .memeImg {
  width: 600px;
  height: 600px;
@@ -148,3 +177,5 @@ text-shadow: 2px, 2px, 0 #000,
  2px, 2px, 5px #000,
 
 }
+
+/*# sourceMappingURL=styles.css.map*/
