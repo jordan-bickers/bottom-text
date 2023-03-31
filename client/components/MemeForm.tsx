@@ -26,24 +26,50 @@ export default function MemeForm() {
 
   return (
     <>
-      <form onSubmit={submitHandler}>
-        <label htmlFor="toptext">TOP TEXT: </label>
-        <input
-          type="text"
-          id="toptext"
-          name="toptext"
-          onChange={changeHandler}
-        />
+      <form
+        className="space-y-12 border-b border-gray-900/10 pb-12"
+        onSubmit={submitHandler}
+      >
+        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div className="sm:col-span-3">
+            <label
+              className="text-base font-semibold leading-7 text-gray-900"
+              htmlFor="toptext"
+            >
+              TOP TEXT:{' '}
+            </label>
+            <input
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              type="text"
+              id="toptext"
+              name="toptext"
+              onChange={changeHandler}
+            />
+          </div>
 
-        <label htmlFor="toptext">BOTTOM TEXT: </label>
-        <input
-          type="text"
-          id="bottomtext"
-          name="bottomtext"
-          onChange={changeHandler}
-        />
-        <Link to="/meme">
-          <button onClick={submitHandler}>subbie</button>
+          <div className="sm:col-span-3">
+            <label
+              className="text-base font-semibold leading-7 text-gray-900"
+              htmlFor="toptext"
+            >
+              BOTTOM TEXT:{' '}
+            </label>
+            <input
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              type="text"
+              id="bottomtext"
+              name="bottomtext"
+              onChange={changeHandler}
+            />
+          </div>
+        </div>
+        <Link className="link " to="/meme">
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+            onClick={submitHandler}
+          >
+            subbie
+          </button>
         </Link>
       </form>
     </>
